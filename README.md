@@ -1,3 +1,3 @@
 # maha
 
-https://kim-j-s.github.io/maha/dist/htmlList.html
+https://kim-j-s.github.io/maha_user/dist/htmlList.html
