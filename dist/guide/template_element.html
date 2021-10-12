@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>공통 템플릿</title>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+
+    <link href="guide.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        (function($) {
+            $(function() {
+                let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+                const $guideElement = $('.guideElement');
+                $guideElement.each(function() {
+                    $(this).after(gBox);
+                    const $element = $(this).html();
+                    $(this).next().children('pre').html($element);
+                });
+
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+    <!-- 구현 페이지 js -->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!-- 구현 페이지 js -->
+
+</head>
+
+<body>
+    <div class="maping">
+        <a href="template.html">Component</a>
+        <a href="template_element.html">Element</a>
+    </div>
+    <h1 class="guideTitleh1">Element</h1>
+
+    <h2 class="guideTitleh2">List</h2>
+    <div class="guideElement">
+        <ul class="list01">
+            <li>리스트</li>
+            <li>리스트</li>
+            <li>리스트</li>
+        </ul>
+    </div>
+
+    <h2 class="guideTitleh2">Card</h2>
+    <div class="guideElement">
+        <div class="cardEle">
+            <div class="cardEle__top">
+                <p class="hTitle ty4">KB튼튼환장 건강보험</p>
+            </div>
+            <div class="cardEle__cont">
+                <ul class="dList">
+                    <li class="top">
+                        <strong class="tit bold">월 보험료</strong>
+                        <div class="cont bold">11,900원</div>
+                    </li>
+                    <li>
+                        <strong class="tit">주요 보장</strong>
+                        <div class="cont">
+                            진단비 1천만원<br>
+							수술비 5천만원<br>
+							암기능항진증 치료비
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="tit">기간</strong>
+                        <div class="cont">납입 20년, 보장 20년</div>
+                    </li>
+                </ul>
+                <div class="btnArea">
+                    <button type="button" class="btn ty3"><span class="text">자세히 보기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="guideTitleh2">Detail List</h2>
+    <div class="guideElement">
+        <ul class="dList">
+            <li class="top">
+                <strong class="tit bold">월 보험료</strong>
+                <div class="cont bold">11,900원</div>
+            </li>
+            <li>
+                <strong class="tit">주요 보장</strong>
+                <div class="cont">
+                    진단비 1천만원<br>
+					수술비 5천만원<br>
+					암기능항진증 치료비
+                </div>
+            </li>
+            <li>
+                <strong class="tit">기간</strong>
+                <div class="cont">납입 20년, 보장 20년</div>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="guideTitleh2">안내문구</h2>
+    <div class="guideElement">
+        <dl class="txtBox">
+            <dt class="ty1">안녕하세요</dt>
+            <dt class="ty2">안녕하세요</dt>
+            <dt class="ty3">안녕하세요</dt>
+            <dd>
+                입력하신 이름, 핸드폰 번호, 주민등록번호는 사용자의 소중한 개인 정보임을 인지하고, 보험 청구 외의 다른 목적으로 활용하지 않습니다.
+            </dd>
+        </dl>
+    </div>
+
+    <!-- <h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
+
+	</div> -->
+
+</body>
+
+</html>

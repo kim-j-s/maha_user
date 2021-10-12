@@ -1,0 +1,289 @@
+/* HTML Default */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+article,
+aside,
+hgroup,
+header,
+footer,
+figure,
+figcaption,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article,
+aside,
+hgroup,
+header,
+footer,
+figure,
+figcaption,
+nav,
+section {
+  display: block;
+}
+
+body {
+  min-width: 1200px;
+  -webkit-text-size-adjust: none;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 16px;
+  color: #141a44;
+  letter-spacing: -0.5px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  overflow: visible;
+  cursor: pointer;
+  line-height: 1;
+  outline: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a,
+active,
+a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+legend,
+caption {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+}
+
+textarea {
+  resize: vertical;
+  font: inherit;
+  overflow-y: auto;
+}
+
+input,
+select {
+  color: inherit;
+  font: inherit;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+address,
+i {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+img,
+select,
+input,
+button {
+  vertical-align: middle;
+}
+
+em {
+  font-style: normal;
+}
+
+label {
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+  line-height: normal !important;
+}
+
+input::-moz-placeholder {
+  line-height: normal !important;
+}
+
+input:-ms-input-placeholder {
+  line-height: normal !important;
+}
+
+input::-ms-input-placeholder {
+  line-height: normal !important;
+}
+
+input::placeholder {
+  line-height: normal !important;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+/* placeholder */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #898da4;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #898da4;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #898da4;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #898da4;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+label,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-ms-clear {
+  display: none;
+}
+
+input[type="button"] {
+  border: 0;
+  outline: 0;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url("../font/IBMPlexSansKR.eot");
+  src: url("../font/IBMPlexSansKR.eot?#iefix") format("embedded-opentype"), url("../font/IBMPlexSansKR.woff2") format("woff2"), url("../font/IBMPlexSansKR.woff") format("woff"), url("../font/IBMPlexSansKR.svg#IBMPlexSansKR") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url("../font/IBMPlexSansKR-Medium.eot");
+  src: url("../font/IBMPlexSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("../font/IBMPlexSansKR-Medium.woff2") format("woff2"), url("../font/IBMPlexSansKR-Medium.woff") format("woff"), url("../font/IBMPlexSansKR-Medium.svg#IBMPlexSansKR-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url("../font/IBMPlexSansKR-Bold.eot");
+  src: url("../font/IBMPlexSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("../font/IBMPlexSansKR-Bold.woff2") format("woff2"), url("../font/IBMPlexSansKR-Bold.woff") format("woff"), url("../font/IBMPlexSansKR-Bold.svg#IBMPlexSansKR-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,92 @@
+/* element */
+.list01 {
+    > li {
+        position: relative;
+        padding-left: 13px;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.5px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 5px;
+            border-bottom: 5px solid #d0d1da;
+
+        }
+        + li {
+            margin-top: 5px;
+        }
+    }
+}
+
+.dList {
+    > li {
+        display: flex;
+        flex-direction: row;
+        > .tit {
+            flex: 1 1 0%;
+            font-weight: normal;
+            line-height: 30px;
+        }
+        > .cont {
+            flex: 1 1 0%;
+            line-height: 30px;
+            text-align: right;
+        }
+        &.top {
+            + li {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+.txtBox {
+    padding: 16px 25px 19px 25px;
+    background: $color03;
+    > dt {
+        position: relative;
+        margin-bottom: 8px;
+        padding-left: 26px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $color01;
+        &.ty1 {
+            
+        }
+        &.ty2 {
+
+        }
+        &.ty3 {
+
+        }
+    }
+    > dd {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: $color05;
+    }
+}
+
+.cardEle {
+    padding: 20px 10px 25px 10px;
+    border-radius: 15px;
+    border: 1px solid $color03;
+    &__top {
+        padding: 0 10px 10px 10px;
+        border-bottom: 1px solid $color03;
+    }
+    &__cont {
+        padding: 15px 10px 0 10px;
+        .btnArea {
+            margin-top: 25px;
+        }
+    }
+}
+
+
+/* // element */

@@ -1,0 +1,62 @@
+$color01 : #0000ff;
+$color02 : #fe3b1f;
+$color03 : #ededef;
+$color04 : #d0d1da;
+$color05 : #898da4;
+$transition : opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* common */
+.medium {
+    font-weight: 500 !important;
+}
+.bold {
+    font-weight: 700 !important;
+}
+
+.hTitle {
+    font-weight: 700;
+    &.ty1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    &.ty2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &.ty3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &.ty4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.txt01 {
+    font-size: 14px;
+    color: #898da4;
+}
+
+.color02 {
+    color: $color02 !important;
+}
+
+
+/* // common */

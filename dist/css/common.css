@@ -1,0 +1,539 @@
+/* common */
+.medium {
+  font-weight: 500 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.hTitle {
+  font-weight: 700;
+}
+
+.hTitle.ty1 {
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.hTitle.ty2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.hTitle.ty3 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.hTitle.ty4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.txt01 {
+  font-size: 14px;
+  color: #898da4;
+}
+
+.color02 {
+  color: #fe3b1f !important;
+}
+
+/* // common */
+/* header */
+/* // header */
+/* component */
+.btn {
+  display: block;
+  width: 100%;
+}
+
+.btn > .text {
+  display: block;
+  border-radius: 5px;
+}
+
+.btn.ty1 > .text {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  background: #0000ff;
+}
+
+.btn.ty1:disabled > .text {
+  color: #898da4;
+  background: #ededef;
+}
+
+.btn.ty2 > .text {
+  padding: 18px 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #0000ff;
+  border: 2px solid #0000ff;
+}
+
+.btn.ty3 > .text {
+  padding: 6px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0000ff;
+  border: 2px solid #0000ff;
+  -webkit-box-shadow: inset 3px 5px 5px 2px rgba(20, 26, 68, 0.01);
+          box-shadow: inset 3px 5px 5px 2px rgba(20, 26, 68, 0.01);
+}
+
+.btn.ty3:disabled > .text {
+  font-weight: normal;
+  color: #898da4;
+  background: #ededef;
+  border-color: #ededef;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.ty4 > .text {
+  padding: 6px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #141a44;
+  border: 1px solid #141a44;
+  -webkit-box-shadow: inset 3px 5px 5px 2px rgba(20, 26, 68, 0.01);
+          box-shadow: inset 3px 5px 5px 2px rgba(20, 26, 68, 0.01);
+}
+
+.btn.ty5 > .text {
+  padding: 4px 0;
+  line-height: 30px;
+  color: #0000ff;
+  border: 1px solid #0000ff;
+}
+
+.btnArea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.btnArea > .btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+
+.btnArea > .btn + .btn {
+  margin-left: 5px;
+}
+
+.chkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.chkbox > label {
+  position: relative;
+  display: block;
+}
+
+.chkbox > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.chkbox > label > input[type="checkbox"] + .text {
+  position: relative;
+  padding-left: 30px;
+}
+
+.chkbox > label > input[type="checkbox"] + .text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #d0d1da url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png) no-repeat center center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.chkbox > label > input[type="checkbox"] + .text::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #0000ff url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png) no-repeat center center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.chkbox > label > input[type="checkbox"]:checked + .text::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chkbox > label > input[type="radio"] + .text {
+  color: red;
+}
+
+.radioTap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0;
+}
+
+.radioTap > label {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center;
+}
+
+.radioTap > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.radioTap > label > input + .text {
+  position: relative;
+  display: block;
+  padding: 11px 0;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.radioTap > label > input + .text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d0d1da;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.radioTap > label > input:checked + .text {
+  z-index: 1;
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.radioTap > label > input:checked + .text::before {
+  border-color: #0000ff;
+}
+
+.radioTap > label:first-child > .text::before {
+  border-radius: 10px 0 0 10px;
+}
+
+.radioTap > label:last-child > .text::before {
+  border-radius: 0 10px 10px 0;
+}
+
+.radioTap > label + label {
+  margin-left: -1px;
+}
+
+.radioTap > label + label > input + .text {
+  border-left: none;
+}
+
+.radioTap.point > label > input:checked + .text:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  width: 7px;
+  margin-left: 4px;
+  border-bottom: 7px solid #fe3b1f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.radioTap.mini > label > input + .text {
+  padding: 6px 0;
+}
+
+.radioTap.mini > label > input:checked + .text::before {
+  border-color: #d0d1da;
+}
+
+.radioTap.mini > label > input:checked + .text::after {
+  margin-left: 3px;
+}
+
+.chkboxBlock > label {
+  position: relative;
+  display: block;
+}
+
+.chkboxBlock > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.chkboxBlock > label > input + .text {
+  position: relative;
+  display: block;
+  padding: 19px 20px 19px 56px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #898da4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input + .text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  width: 22px;
+  height: 22px;
+  background-color: #b7bac8;
+  background-image: url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input + .text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #d0d1da;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input:checked + .text {
+  color: #0000ff;
+}
+
+.chkboxBlock > label > input:checked + .text::before {
+  background-color: #0000ff;
+}
+
+.chkboxBlock > label > input:checked + .text::after {
+  border-color: #0000ff;
+}
+
+.chkboxBlock.big > label > input + .text {
+  padding: 17px 20px 17px 66px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.chkboxBlock.big > label > input + .text::before {
+  width: 28px;
+  height: 28px;
+}
+
+.inputWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWrap > .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 20px 0 20px 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.inputWrap > .inp {
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding-left: 114px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-bottom: 2px solid #d0d1da;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inputWrap > .inp.on, .inputWrap > .inp:focus {
+  border-bottom: 2px solid #0000ff;
+}
+
+.inputWrap > .inp.error, .inputWrap > .inp.error:focus {
+  border-bottom: 2px solid #fe3b1f;
+}
+
+.inputWrap + .txt01 {
+  padding: 8px 0 0 8px;
+}
+
+/* // component */
+/* element */
+.list01 > li {
+  position: relative;
+  padding-left: 13px;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.5px;
+}
+
+.list01 > li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 5px;
+  border-bottom: 5px solid #d0d1da;
+}
+
+.list01 > li + li {
+  margin-top: 5px;
+}
+
+.dList > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dList > li > .tit {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.dList > li > .cont {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  line-height: 30px;
+  text-align: right;
+}
+
+.dList > li.top + li {
+  margin-top: 5px;
+}
+
+.txtBox {
+  padding: 16px 25px 19px 25px;
+  background: #ededef;
+}
+
+.txtBox > dt {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 26px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0000ff;
+}
+
+.txtBox > dd {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #898da4;
+}
+
+.cardEle {
+  padding: 20px 10px 25px 10px;
+  border-radius: 15px;
+  border: 1px solid #ededef;
+}
+
+.cardEle__top {
+  padding: 0 10px 10px 10px;
+  border-bottom: 1px solid #ededef;
+}
+
+.cardEle__cont {
+  padding: 15px 10px 0 10px;
+}
+
+.cardEle__cont .btnArea {
+  margin-top: 25px;
+}
+
+/* // element */
