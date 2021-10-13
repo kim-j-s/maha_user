@@ -161,49 +161,137 @@
 
 .chkbox > label > input[type="checkbox"] + .text {
   position: relative;
-  padding-left: 30px;
+  display: inline-block;
 }
 
 .chkbox > label > input[type="checkbox"] + .text::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: #d0d1da url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png) no-repeat center center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
-}
-
-.chkbox > label > input[type="checkbox"] + .text::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: #0000ff url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png) no-repeat center center;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, -webkit-transform 0.3s;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 50%;
-}
-
-.chkbox > label > input[type="checkbox"]:checked + .text::after {
-  opacity: 1;
-  visibility: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .chkbox > label > input[type="radio"] + .text {
   color: red;
+}
+
+.chkbox.ty1 > label > input[type="checkbox"] + .text {
+  padding-left: 30px;
+  line-height: 22px;
+}
+
+.chkbox.ty1 > label > input[type="checkbox"] + .text::before {
+  top: 0px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #d0d1da url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
+}
+
+.chkbox.ty1 > label > input[type="checkbox"]:checked + .text::before {
+  background-color: #0000ff;
+}
+
+.chkbox.ty2 > label > input[type="checkbox"] + .text {
+  padding-left: 37px;
+  line-height: 28px;
+}
+
+.chkbox.ty2 > label > input[type="checkbox"] + .text::before {
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background: #d0d1da url(../images/common/ico_chk_02.png) no-repeat center center/16px auto;
+}
+
+.chkbox.ty2 > label > input[type="checkbox"]:checked + .text::before {
+  background-color: #141a44;
+}
+
+.chkboxBlock > label {
+  position: relative;
+  display: block;
+}
+
+.chkboxBlock > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.chkboxBlock > label > input + .text {
+  position: relative;
+  display: block;
+  padding: 19px 20px 19px 56px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #898da4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input + .text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  width: 22px;
+  height: 22px;
+  background: #b7bac8 url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input + .text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #d0d1da;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkboxBlock > label > input:checked + .text {
+  color: #0000ff;
+}
+
+.chkboxBlock > label > input:checked + .text::before {
+  background-color: #0000ff;
+}
+
+.chkboxBlock > label > input:checked + .text::after {
+  border-color: #0000ff;
+}
+
+.chkboxBlock.big > label > input + .text {
+  padding: 17px 20px 17px 66px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.chkboxBlock.big > label > input + .text::before {
+  width: 28px;
+  height: 28px;
 }
 
 .radioTap {
@@ -286,17 +374,26 @@
   border-left: none;
 }
 
-.radioTap.point > label > input:checked + .text:after {
+.radioTap.point > label > input + .text:after {
   content: '';
   position: absolute;
   top: 50%;
   margin-top: -13px;
-  width: 7px;
-  margin-left: 4px;
-  border-bottom: 7px solid #fe3b1f;
+  width: 5px;
+  margin-left: 6px;
+  border-bottom: 5px solid #fe3b1f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.radioTap.point > label > input:checked + .text:after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .radioTap.mini > label > input + .text {
@@ -309,91 +406,6 @@
 
 .radioTap.mini > label > input:checked + .text::after {
   margin-left: 3px;
-}
-
-.chkboxBlock > label {
-  position: relative;
-  display: block;
-}
-
-.chkboxBlock > label > input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-}
-
-.chkboxBlock > label > input + .text {
-  position: relative;
-  display: block;
-  padding: 19px 20px 19px 56px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #898da4;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.chkboxBlock > label > input + .text::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 21px;
-  width: 22px;
-  height: 22px;
-  background-color: #b7bac8;
-  background-image: url(https://kim-j-s.github.io/paymentpc/dist/img/ico-left-check.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.chkboxBlock > label > input + .text::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  border: 2px solid #d0d1da;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.chkboxBlock > label > input:checked + .text {
-  color: #0000ff;
-}
-
-.chkboxBlock > label > input:checked + .text::before {
-  background-color: #0000ff;
-}
-
-.chkboxBlock > label > input:checked + .text::after {
-  border-color: #0000ff;
-}
-
-.chkboxBlock.big > label > input + .text {
-  padding: 17px 20px 17px 66px;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.chkboxBlock.big > label > input + .text::before {
-  width: 28px;
-  height: 28px;
 }
 
 .inputWrap {

@@ -3,7 +3,9 @@ $color02 : #fe3b1f;
 $color03 : #ededef;
 $color04 : #d0d1da;
 $color05 : #898da4;
-$transition : opacity 0.3s, visibility 0.3s, transform 0.3s;
+$color06 : #b7bac8;
+$color07 : #141a44;
+$transition : opacity 0.3s, visibility 0.3s;
 
 @mixin ellipsis {
     white-space: nowrap;
