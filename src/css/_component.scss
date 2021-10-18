@@ -167,6 +167,59 @@
     }
 }
 
+.textChkbox {
+    display: inline-block;
+    font-size: 0;
+    > label {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        > input {
+            @include input;
+            + .text {
+                position: relative;
+                display: block;
+                padding-left: 24px;
+                font-size: 14px;
+                line-height: 20px;
+                color: $color05;
+                background-image: url(../images/common/ico_chk_02_off.png);
+                background-position: left 5px;
+                background-size: 13px auto;
+                background-repeat: no-repeat;
+                transition: 0.3s;
+            }
+            &:checked {
+                + .text {
+                    color: $color07;
+                    background-image: url(../images/common/ico_chk_02_on.png);
+                }
+            }
+        }
+    }
+}
+
+.detail-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    text-indent: -999px;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        width: 9px;
+        height: 9px;
+        border-top: 1px solid #d0d1da;
+        border-right: 1px solid #d0d1da;
+        transform: rotate(45deg);
+    }
+}
+
 .chkboxBlock {
     > label {
         position: relative;

@@ -21,6 +21,18 @@
     }
 }
 
+.agrList {
+    li {
+        font-size: 0;
+        + li {
+            margin-top: 10px;
+        }
+        label + .detail-link {
+            margin-left: 3px;
+        }
+    }
+}
+
 .dList {
     > li {
         display: flex;
@@ -43,7 +55,6 @@
     }
 }
 
-
 .txtBox {
     padding: 16px 25px 19px 25px;
     background: $color03;
@@ -54,14 +65,19 @@
         font-weight: 700;
         line-height: 24px;
         color: $color01;
+        background-position: left 2px;
+        background-size: 20px auto;
+        background-repeat: no-repeat;
         &.ty1 {
-            
+            background-image: url(../images/common/ico_noti01.png);
         }
         &.ty2 {
-
+            background-position: left 2px;
+            background-size: 18px auto;
+            background-image: url(../images/common/ico_noti02.png);
         }
         &.ty3 {
-
+            background-image: url(../images/common/ico_noti03.png);
         }
     }
     > dd {
