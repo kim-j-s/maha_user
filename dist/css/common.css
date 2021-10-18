@@ -348,13 +348,13 @@
   border-color: #0000ff;
 }
 
-.chkboxBlock.big > label > input + .text {
-  padding: 17px 20px 17px 66px;
+.chkboxBlock.etc01 > label > input + .text {
+  padding: 16px 20px 16px 66px;
   font-size: 20px;
   line-height: 28px;
 }
 
-.chkboxBlock.big > label > input + .text::before {
+.chkboxBlock.etc01 > label > input + .text::before {
   width: 28px;
   height: 28px;
 }
@@ -549,6 +549,10 @@
 
 .agrList li label + .detail-link {
   margin-left: 3px;
+}
+
+.chkboxBlock + .agrList {
+  margin-top: 20px;
 }
 
 .dList > li {
