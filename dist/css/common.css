@@ -34,6 +34,7 @@
 .txt01 {
   font-size: 14px;
   color: #898da4;
+  line-height: 20px;
 }
 
 .color02 {
@@ -162,11 +163,18 @@
 .chkbox > label > input[type="checkbox"] + .text {
   position: relative;
   display: inline-block;
+  padding-left: 30px;
+  line-height: 22px;
 }
 
 .chkbox > label > input[type="checkbox"] + .text::before {
   content: '';
   position: absolute;
+  top: 0px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #d0d1da url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
@@ -174,33 +182,20 @@
   transition: 0.3s;
 }
 
+.chkbox > label > input[type="checkbox"]:checked + .text::before {
+  background-color: #0000ff;
+}
+
 .chkbox > label > input[type="radio"] + .text {
   color: red;
 }
 
-.chkbox.ty1 > label > input[type="checkbox"] + .text {
-  padding-left: 30px;
-  line-height: 22px;
-}
-
-.chkbox.ty1 > label > input[type="checkbox"] + .text::before {
-  top: 0px;
-  left: 0;
-  width: 22px;
-  height: 22px;
-  background: #d0d1da url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
-}
-
-.chkbox.ty1 > label > input[type="checkbox"]:checked + .text::before {
-  background-color: #0000ff;
-}
-
-.chkbox.ty2 > label > input[type="checkbox"] + .text {
+.chkbox.etc01 > label > input[type="checkbox"] + .text {
   padding-left: 37px;
   line-height: 28px;
 }
 
-.chkbox.ty2 > label > input[type="checkbox"] + .text::before {
+.chkbox.etc01 > label > input[type="checkbox"] + .text::before {
   top: 0;
   left: 0;
   width: 28px;
@@ -208,8 +203,12 @@
   background: #d0d1da url(../images/common/ico_chk_02.png) no-repeat center center/16px auto;
 }
 
-.chkbox.ty2 > label > input[type="checkbox"]:checked + .text::before {
+.chkbox.etc01 > label > input[type="checkbox"]:checked + .text::before {
   background-color: #141a44;
+}
+
+.chkbox + .chkbox {
+  margin-left: 30px;
 }
 
 .textChkbox {
@@ -537,6 +536,65 @@
 
 .list01 > li + li {
   margin-top: 5px;
+}
+
+.list02 > li {
+  padding-left: 32px;
+  color: #141a44;
+  line-height: 20px;
+  opacity: 0.5;
+  background: url(../images/common/ico_chk_03.png) no-repeat left top/21px auto;
+}
+
+.list02 > li + li {
+  margin-top: 20px;
+}
+
+.list02 > li.on {
+  opacity: 1;
+}
+
+.list03 > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list03 > li > .num {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0000ff;
+}
+
+.list03 > li .cont {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  padding-left: 4px;
+}
+
+.list03 > li .cont > .tit {
+  display: block;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0000ff;
+}
+
+.list03 > li .cont > .desc {
+  padding: 4px 0 8px 0;
+  font-size: 14px;
+  color: #898da4;
 }
 
 .agrList li {

@@ -21,6 +21,50 @@
     }
 }
 
+.list02 {
+    > li {
+        padding-left: 32px;
+        color: $color07;
+        line-height: 20px;
+        opacity: 0.5;
+        background: url(../images/common/ico_chk_03.png) no-repeat left top / 21px auto;
+        + li {
+            margin-top: 20px;
+        }
+        &.on {
+            opacity: 1;
+        }
+    }
+}
+
+.list03 {
+    > li {
+        display: flex;
+        flex-direction: row;
+        > .num {
+            flex: none;
+            font-weight: 700;
+            line-height: 24px;
+            color: $color01;
+        }
+        .cont {
+            flex: 1 1 0%;
+            padding-left: 4px;
+            > .tit {
+                display: block;
+                font-weight: 700;
+                line-height: 24px;
+                color: $color01;
+            }
+            > .desc {
+                padding: 4px 0 8px 0;
+                font-size: 14px;
+                color: $color05;
+            }
+        }
+    }
+}
+
 .agrList {
     li {
         font-size: 0;

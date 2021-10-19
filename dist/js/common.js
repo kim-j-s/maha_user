@@ -25,15 +25,8 @@
     function agreeAll() {
         var checked_all = false;
         var check_all_button = document.querySelector('#check-all');
-        //var check_all_button = document.querySelectorAll('.chkAll');
-        //var target_checkboxes = document.querySelectorAll('.checkboxes');
         var target_checkboxes = document.querySelectorAll('.agrContent .agrList input');
-
-        /*
-        * if the user clicked on one of the checkboxes,
-        * either checked them or unchecked them,
-        * reset checked_all to false
-        */
+        
         target_checkboxes.forEach(function(checkbox) {
             checkbox.addEventListener('change', function() {
                 var unchecked = Array.prototype.slice.call(target_checkboxes).filter(checkbox => !checkbox.checked);
@@ -50,11 +43,6 @@
             });
         });
 
-        /*
-        * when the user clicked on the check all button,
-        * check all the target checkboxes
-        */
-        //check_all_button.addEventListener('click', function() {
         check_all_button.addEventListener('click', function() {
             checked_all = !checked_all;
             target_checkboxes.forEach(function(checkbox) {

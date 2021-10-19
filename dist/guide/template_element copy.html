@@ -2,86 +2,84 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <title>공통 템플릿</title>
-    <link href="../css/reset.css" rel="stylesheet" />
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>공통 템플릿</title>
+	<link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/common.css" rel="stylesheet" />
 
     <link href="guide.css" rel="stylesheet" />
 
-    <script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>    
 
-    <script>
-        (function($) {
-            $(function() {
-                let gBox = `<div class="guideBox">
+	<script>
+		(function($){
+			$(function(){
+				let gBox = `<div class="guideBox">
 					<pre class="brush: html;">
 					</pre>
 				</div>
 				`;
 
-                const $guideElement = $('.guideElement');
-                $guideElement.each(function() {
-                    $(this).after(gBox);
-                    const $element = $(this).html();
-                    $(this).next().children('pre').html($element);
-                });
+				const $guideElement = $('.guideElement');
+				$guideElement.each(function(){
+					$(this).after(gBox);
+					const $element = $(this).html();
+					$(this).next().children('pre').html($element);
+				});
 
-            });
-        })(jQuery);
-    </script>
+			});
+		})(jQuery);
+	</script>	
 
-    <script type="text/javascript" src="code/scripts/shCore.js"></script>
-    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
-    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
-    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
-    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
-    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="code/scripts/shCore.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
-    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
-    <script type="text/javascript">
-        SyntaxHighlighter.all();
-    </script>
+	<link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
 
-    <!-- 구현 페이지 js -->
-
-    <script type="text/javascript" src="../js/common.js"></script>
-    <!-- 구현 페이지 js -->
+	<!-- 구현 페이지 js -->
+	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<!-- 구현 페이지 js -->
 
 </head>
-
 <body>
     <div class="maping">
-        <a href="template.html">Component</a>
-        <a href="template_element.html">Element</a>
-    </div>
-    <h1 class="guideTitleh1">Component</h1>
+		<a href="template.html">Component</a>
+		<a href="template_element.html">Element</a>
+	</div>
+	<h1 class="guideTitleh1">Component</h1>
 
-    <h2 class="guideTitleh2"></h2>
-    <div class="guideElement">
-
-    </div>
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
+	<h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
+		
+	</div>
+	<!-- souce code 뷰어 -->
+	<div class="box">
+		<pre class="brush: html;">
 		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
+	</div>
+	<!-- //souce code 뷰어 -->
 
-    <h2 class="guideTitleh2"></h2>
-    <div class="guideElement">
+	<h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
 
-    </div>
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
+	</div>
+	<!-- souce code 뷰어 -->
+	<div class="box">
+		<pre class="brush: html;">
 		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
+	</div>
+	<!-- //souce code 뷰어 -->
 
 </body>
-
 </html>
