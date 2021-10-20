@@ -537,6 +537,22 @@
   padding: 8px 0 0 8px;
 }
 
+.badge {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  background: #141a44;
+  background: rgba(20, 26, 68, 0.05);
+}
+
+.badge.ty1 {
+  color: #0000ff;
+}
+
+.badge.ty2 {
+  color: #fe3b1f;
+}
+
 /* // component */
 /* element */
 .list01 > li {
@@ -786,7 +802,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 15px;
+  margin-top: 16px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;

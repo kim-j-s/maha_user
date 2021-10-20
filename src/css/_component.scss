@@ -419,8 +419,6 @@
     }
 }
 
-
-
 .inputWrap {
     position: relative;
     overflow: hidden;
@@ -460,7 +458,19 @@
     }
 }
 
-
+.badge {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 30px;
+    background: #141a44;
+    background: rgba(20, 26, 68, 0.05);
+    &.ty1 {
+        color: $color01;
+    }
+    &.ty2 {
+        color: $color02;
+    }
+}
 
 
 /* // component */
