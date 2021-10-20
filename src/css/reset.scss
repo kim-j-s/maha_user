@@ -86,7 +86,6 @@ section {
 }
 
 body {
-    min-width: 1200px;
     -webkit-text-size-adjust: none;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 16px;
@@ -243,6 +242,11 @@ a {
 input[type="button"] {
     border: 0;
     outline: 0;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 

@@ -175,8 +175,6 @@
   width: 22px;
   height: 22px;
   background: #d0d1da url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 50%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -296,6 +294,7 @@
   display: block;
   padding: 19px 20px 19px 56px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 24px;
   color: #898da4;
   -webkit-transition: 0.3s;
@@ -310,8 +309,6 @@
   width: 22px;
   height: 22px;
   background: #b7bac8 url(../images/common/ico_chk_01.png) no-repeat center center/13px auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -327,8 +324,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   border: 2px solid #d0d1da;
   -webkit-transition: 0.3s;
@@ -356,6 +351,34 @@
 .chkboxBlock.etc01 > label > input + .text::before {
   width: 28px;
   height: 28px;
+}
+
+.chkboxBlock.etc02 > label > input + .text {
+  padding: 13px;
+  text-align: center;
+}
+
+.chkboxBlock.etc02 > label > input + .text::before {
+  content: none;
+}
+
+.chkboxBlockGroup {
+  font-size: 0;
+}
+
+.chkboxBlockGroup > .chkboxBlock.etc02 {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 5px);
+  margin-top: 10px;
+}
+
+.chkboxBlockGroup > .chkboxBlock.etc02:nth-child(2n) {
+  margin-left: 10px;
+}
+
+.chkboxBlockGroup > .chkboxBlock.etc02:nth-child(-n + 2n) {
+  margin-top: 0;
 }
 
 .radioTap {
@@ -406,8 +429,6 @@
   width: 100%;
   height: 100%;
   border: 1px solid #d0d1da;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -446,8 +467,6 @@
   width: 5px;
   margin-left: 6px;
   border-bottom: 5px solid #fe3b1f;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
@@ -488,11 +507,14 @@
   line-height: 30px;
 }
 
+.inputWrap > .label + .inp {
+  padding-left: 114px;
+}
+
 .inputWrap > .inp {
   display: block;
   width: 100%;
   height: 70px;
-  padding-left: 114px;
   font-size: 18px;
   border: 1px solid #fff;
   border-bottom: 2px solid #d0d1da;
@@ -686,6 +708,7 @@
 }
 
 .cardEle {
+  position: relative;
   padding: 20px 10px 25px 10px;
   border-radius: 15px;
   border: 1px solid #ededef;
@@ -702,6 +725,89 @@
 
 .cardEle__cont .btnArea {
   margin-top: 25px;
+}
+
+.chkCard {
+  position: relative;
+  padding: 20px 18px;
+}
+
+.chkCard > label {
+  display: block;
+}
+
+.chkCard > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.chkCard > label > input + .cont {
+  display: block;
+  color: #898da4;
+}
+
+.chkCard > label > input + .cont::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d0d1da;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.chkCard > label > input + .cont.ty1 {
+  padding-left: 28px;
+  background: url(../images/common/ico_chk_04_off.png) no-repeat left 8px/15px auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.chkCard > label > input + .cont.ty1 .conts {
+  display: block;
+  line-height: 28px;
+}
+
+.chkCard > label > input + .cont.ty1 .conts + .conts {
+  margin-top: 2px;
+}
+
+.chkCard > label > input + .cont .rst {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+}
+
+.chkCard > label > input:checked + .cont {
+  color: #141a44;
+}
+
+.chkCard > label > input:checked + .cont::after {
+  border-color: #0000ff;
+}
+
+.chkCard > label > input:checked + .cont.ty1 {
+  background-image: url(../images/common/ico_chk_04_on.png);
+}
+
+.chkCard .btnArea {
+  margin-top: 15px;
 }
 
 /* // element */

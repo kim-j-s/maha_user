@@ -107,7 +107,6 @@
                         width: 22px;
                         height: 22px;
                         background: $color04 url(../images/common/ico_chk_01.png) no-repeat center center / 13px auto;
-                        box-sizing: border-box;
                         border-radius: 50%;
                         transition: 0.3s;
                     }
@@ -222,6 +221,7 @@
                 display: block;
                 padding: 19px 20px 19px 56px;
                 font-weight: 700;
+                font-size: 16px;
                 line-height: 24px;
                 color: #898da4;
                 transition: 0.3s;
@@ -233,7 +233,6 @@
                     width: 22px;
                     height: 22px;
                     background: $color06 url(../images/common/ico_chk_01.png) no-repeat center center / 13px auto;
-                    box-sizing: border-box;
                     border-radius: 50%;
                     transform: translateY(-50%);
                     transition: 0.3s;
@@ -245,7 +244,6 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    box-sizing: border-box;
                     border-radius: 5px;
                     border: 2px solid $color04;
                     transition: 0.3s;
@@ -279,6 +277,35 @@
             }
         }
     }
+    &.etc02 {
+        > label {
+            > input {
+                + .text {
+                    padding: 13px;
+                    text-align: center;
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chkboxBlockGroup {
+    font-size: 0;
+    > .chkboxBlock.etc02 {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 5px);
+        margin-top: 10px;
+        &:nth-child(2n) {
+            margin-left: 10px;
+        }
+        &:nth-child(-n + 2n) {
+            margin-top: 0;
+        }
+    }
 }
 
 .radioTap {
@@ -305,7 +332,6 @@
                     width: 100%;
                     height: 100%;
                     border: 1px solid $color04;
-                    box-sizing: border-box;
                     transition: 0.3s;
                 }
             }
@@ -355,7 +381,6 @@
                         width: 5px;
                         margin-left: 6px;
                         border-bottom: 5px solid $color02;
-                        box-sizing: border-box;
                         border-radius: 50%;
                         opacity: 0;
                         visibility: hidden;
@@ -408,12 +433,14 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 30px;
+        + .inp {
+            padding-left: 114px;
+        }
     }
     > .inp {
         display: block;
         width: 100%;
         height: 70px;
-        padding-left: 114px;
         font-size: 18px;
         border: 1px solid #fff;
         border-bottom: 2px solid $color04;
