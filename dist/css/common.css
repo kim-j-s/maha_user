@@ -539,8 +539,8 @@
 
 .badge {
   display: inline-block;
-  padding: 0 10px;
-  line-height: 30px;
+  padding: 3pxrjwjf 10px;
+  line-height: 24px;
   background: #141a44;
   background: rgba(20, 26, 68, 0.05);
 }
@@ -748,6 +748,10 @@
   padding: 20px 18px;
 }
 
+.chkCard + .chkCard {
+  margin-top: 20px;
+}
+
 .chkCard > label {
   display: block;
 }
@@ -788,13 +792,24 @@
   transition: 0.3s;
 }
 
-.chkCard > label > input + .cont.ty1 .conts {
+.chkCard > label > input + .cont.ty1 .item {
   display: block;
   line-height: 28px;
 }
 
-.chkCard > label > input + .cont.ty1 .conts + .conts {
+.chkCard > label > input + .cont.ty1 .item + .item {
   margin-top: 2px;
+}
+
+.chkCard > label > input + .cont.ty2 .top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .chkCard > label > input + .cont .rst {

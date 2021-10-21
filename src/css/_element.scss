@@ -155,6 +155,9 @@
 .chkCard {
     position: relative;
     padding: 20px 18px;
+    + .chkCard {
+        margin-top: 20px;
+    }
     > label {
         display: block;
         > input {
@@ -178,12 +181,18 @@
                     padding-left: 28px;
                     background: url(../images/common/ico_chk_04_off.png) no-repeat left 8px / 15px auto;
                     transition: 0.3s;
-                    .conts {
+                    .item {
                         display: block;
                         line-height: 28px;
-                        + .conts {
+                        + .item {
                             margin-top: 2px;
                         }
+                    }
+                }
+                &.ty2 {
+                    .top {
+                        display: flex;
+                        justify-content: space-between;
                     }
                 }
                 .rst {
