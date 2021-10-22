@@ -54,38 +54,51 @@
 
     function agreeAll() {
         //var checked_all = false;
-        var agr_wrap = document.querySelector('.agrWrap');
-        var check_all_button = document.querySelector('.chkAll');
+        //var agr_wrap = document.querySelector('.agrWrap');
+        //var check_all_button = document.querySelector('.chkAll');
         //var target_checkboxes = document.querySelectorAll('.agrWrap input');
 
-        var xx = agr_wrap.length;
+        var $agr_wrap = $('.agrWrap');
+        var $check_all_button = $('.chkAll');
+        var $target_checkboxes = $('.agrWrap input');
 
-        console.log(xx, agr_wrap );
-
-            /*
-            target_checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    var unchecked = Array.prototype.slice.call(target_checkboxes).filter(checkbox => !checkbox.checked);
-                    
+        $agr_wrap.each(function(i){
+            //console.log(i);
+            $target_checkboxes.each(function(checkbox){
+                $(this).on('change', function(xx){
+                    // var unchecked = Array.prototype.slice.call($target_checkboxes).filter(checkbox => !checkbox.checked) ;
+                    var unchecked = Array.prototype.slice.call($target_checkboxes).filter(checkbox => !checkbox.checked) ;
                     console.log(unchecked.length);
-    
-                    if(unchecked.length) {
-                        checked_all = false;
-                        check_all_button.checked = false;
-                    } else {
-                        checked_all = true;
-                        check_all_button.checked = true;
-                    }
                 });
             });
-    
-            check_all_button.addEventListener('click', function() {
-                checked_all = !checked_all;
-                target_checkboxes.forEach(function(checkbox) {
-                    checkbox.checked = checked_all;
-                });
+        });
+
+
+
+        /*
+        target_checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                var unchecked = Array.prototype.slice.call(target_checkboxes).filter(checkbox => !checkbox.checked);
+                
+                console.log(unchecked.length);
+
+                if(unchecked.length) {
+                    checked_all = false;
+                    check_all_button.checked = false;
+                } else {
+                    checked_all = true;
+                    check_all_button.checked = true;
+                }
             });
-            */
+        });
+
+        check_all_button.addEventListener('click', function() {
+            checked_all = !checked_all;
+            target_checkboxes.forEach(function(checkbox) {
+                checkbox.checked = checked_all;
+            });
+        });
+        */
 
         
         
