@@ -1,0 +1,83 @@
+@@include('head.html')
+<body>
+
+<div class="wrap">
+    @@include('user.html')
+
+    <div class="container flex column fullHeight sb">
+        <div class="inCont">
+            <div class="tabWrap">
+                <a href="#" class="on point"><span class="text">청구</span></a>
+                <a href="#"><span class="text">실비청구 현황</span></a>
+            </div>
+
+            <div class="agrWrap">
+                <div class="chkboxBlock">
+                    <label>
+                        <input type="checkbox" name="" id="" class="chkAll">
+                        <span class="text">전체 선택하기</span>
+                    </label>
+                </div>            
+                <ul class="agrList card">
+                    <li>
+                        <div class="chkCard">
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <span class="cont ty1">
+                                    <span class="item">2020.09.14</span>
+                                    <span class="item">광교고운피부과의원</span>
+                                    <span class="item">병원비용 120,900원</span>
+                                    <strong class="rst">
+                                        <span class="txt">돌려받을 의료비</span>
+                                        <span class="won">32,100원</span>
+                                    </strong>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="chkCard">
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <span class="cont ty1">
+                                    <span class="item">2020.09.14</span>
+                                    <span class="item">광교고운피부과의원</span>
+                                    <span class="item">병원비용 120,900원</span>
+                                    <strong class="rst">
+                                        <span class="txt">돌려받을 의료비</span>
+                                        <span class="won">32,100원</span>
+                                    </strong>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="chkCard">
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <span class="cont ty1">
+                                    <span class="item">2020.09.14</span>
+                                    <span class="item">광교고운피부과의원</span>
+                                    <span class="item">병원비용 120,900원</span>
+                                    <strong class="rst">
+                                        <span class="txt">돌려받을 의료비</span>
+                                        <span class="won">32,100원</span>
+                                    </strong>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottomContent">
+            <div class="inCont">
+                <button type="button" class="btn ty1" disabled><span class="text">청구하기</span></button>
+            </div>
+            @@include('foot.html')
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

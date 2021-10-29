@@ -65,6 +65,10 @@
     }
 }
 
+.agrWrap {
+    margin-top: 30px;
+}
+
 .agrList {
     li {
         font-size: 0;
@@ -77,6 +81,16 @@
     }
     .chkboxBlock + & {
         margin-top: 20px;
+    }
+    .textChkbox {
+        display: flex;
+    }
+    &.card {
+        li {
+        + li {
+            margin-top: 20px;
+        }
+        }
     }
 }
 
@@ -165,6 +179,7 @@
             + .cont {
                 display: block;
                 color: $color05;
+                font-size: 16px;
                 &::after {
                     content: '';
                     position: absolute;

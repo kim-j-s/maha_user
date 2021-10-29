@@ -30,10 +30,6 @@
           flex-direction: column;
 }
 
-.flex.column .topCont {
-  margin-bottom: 20px;
-}
-
 .flex .sb {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -50,24 +46,54 @@
 
 .bottomContent {
   margin-top: auto;
-  /* padding: 0 0 30px 0; */
+  padding-top: 20px;
 }
 
-.bc-cont {
+.footCont {
   position: relative;
   top: 30px;
   overflow: hidden;
 }
 
-.bc {
-  font-size: 0;
+.footCont .inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background: #f3f4f7;
 }
 
-.bc > a {
+.footCont .inner > a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  padding: 27px 0 24px 0;
+  text-align: center;
+}
+
+.footCont .inner > a > .text {
   display: inline-block;
-  width: 50%;
-  height: 100px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footCont .inner > a.r3 > .text {
+  color: #0000ff;
+  padding-left: 35px;
+  background: url(../images/common/ico_r3.png) no-repeat left center;
+}
+
+.footCont .inner > a.analysis > .text {
+  color: #d0d1da;
+  padding-left: 30px;
+  background: url(../images/common/ico_analysis.png) no-repeat left center;
 }
 
 .hTitle {
@@ -80,21 +106,26 @@
 }
 
 .hTitle.ty2 {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
 }
 
 .hTitle.ty3 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
 }
 
 .hTitle.ty4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.hTitle.ty5 {
   font-size: 16px;
   line-height: 24px;
 }
 
-.hTitle.ty4 + .txt02 {
+.hTitle.ty5 + .txt02 {
   margin-top: 17px;
 }
 
@@ -342,6 +373,10 @@
 
 .btnArea > .btn + .btn {
   margin-left: 5px;
+}
+
+.agrWrap + .btnArea {
+  margin-top: 30px;
 }
 
 .chkbox {
@@ -846,6 +881,10 @@
   color: #fe3b1f;
 }
 
+.link {
+  display: inline-block;
+}
+
 /* // component */
 /* element */
 .list01 > li {
@@ -928,6 +967,10 @@
   color: #898da4;
 }
 
+.agrWrap {
+  margin-top: 30px;
+}
+
 .agrList li {
   font-size: 0;
 }
@@ -941,6 +984,17 @@
 }
 
 .chkboxBlock + .agrList {
+  margin-top: 20px;
+}
+
+.agrList .textChkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.agrList.card li + li {
   margin-top: 20px;
 }
 
@@ -1062,6 +1116,7 @@
 .chkCard > label > input + .cont {
   display: block;
   color: #898da4;
+  font-size: 16px;
 }
 
 .chkCard > label > input + .cont::after {

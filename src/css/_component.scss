@@ -82,6 +82,9 @@
             margin-left: 5px;
         }
     }
+    .agrWrap + & {
+        margin-top: 30px;
+    }
 }
 
 .chkbox {
@@ -544,5 +547,8 @@
     }
 }
 
+.link {
+    display: inline-block;
+}
 
 /* // component */

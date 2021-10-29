@@ -20,95 +20,37 @@
         });
     }
 
-    // agree all
-    /*
     function agreeAll() {
-        var checked_all = false;
-        var check_all_button = document.querySelector('#check-all');
-        var target_checkboxes = document.querySelectorAll('.agrContent .agrList input');
-        
-        target_checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                var unchecked = Array.prototype.slice.call(target_checkboxes).filter(checkbox => !checkbox.checked);
-                
-                console.log(unchecked.length);
-
-                if(unchecked.length) {
-                    checked_all = false;
-                    check_all_button.checked = false;
-                } else {
-                    checked_all = true;
-                    check_all_button.checked = true;
-                }
-            });
-        });
-
-        check_all_button.addEventListener('click', function() {
-            checked_all = !checked_all;
-            target_checkboxes.forEach(function(checkbox) {
-                checkbox.checked = checked_all;
-            });
-        });
-    }
-    */
-
-    function agreeAll() {
-        //var checked_all = false;
-        //var agr_wrap = document.querySelector('.agrWrap');
-        //var check_all_button = document.querySelector('.chkAll');
-        //var target_checkboxes = document.querySelectorAll('.agrWrap input');
-
-        var $agr_wrap = $('.agrWrap');
         var $check_all_button = $('.chkAll');
-        var $target_checkboxes = $('.agrWrap input');
+        var $target_checkboxes = $('.agrList input');
 
-        $agr_wrap.each(function(i){
-            //console.log(i);
-            $target_checkboxes.each(function(checkbox){
-                $(this).on('change', function(xx){
-                    // var unchecked = Array.prototype.slice.call($target_checkboxes).filter(checkbox => !checkbox.checked) ;
-                    var unchecked = Array.prototype.slice.call($target_checkboxes).filter(checkbox => !checkbox.checked) ;
-                    console.log(unchecked.length);
-                });
-            });
+        $check_all_button.on('change', function(){
+            if ($(this).prop('checked')) {
+                $(this).closest('.agrWrap').find('.agrList input').prop('checked',true);
+            } else {
+                $(this).closest('.agrWrap').find('.agrList input').prop('checked',false);
+            }
         });
 
-
-
-        /*
-        target_checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                var unchecked = Array.prototype.slice.call(target_checkboxes).filter(checkbox => !checkbox.checked);
-                
-                console.log(unchecked.length);
-
-                if(unchecked.length) {
-                    checked_all = false;
-                    check_all_button.checked = false;
+        $target_checkboxes.each(function(){
+            $(this).on('click', function(){
+                var lng = $(this).closest('.agrList').find('input').not('.exception').length;
+                var checkedLng = $(this).closest('.agrList').find('input:checkbox:checked').not('.exception').length;
+                console.log(lng, checkedLng);
+                if (lng === checkedLng) {
+                    $(this).closest('.agrWrap').find('.chkAll').prop('checked',true);
                 } else {
-                    checked_all = true;
-                    check_all_button.checked = true;
+                    $(this).closest('.agrWrap').find('.chkAll').prop('checked',false);
                 }
             });
         });
-
-        check_all_button.addEventListener('click', function() {
-            checked_all = !checked_all;
-            target_checkboxes.forEach(function(checkbox) {
-                checkbox.checked = checked_all;
-            });
-        });
-        */
-
-        
-        
     }
     
+
     $(function(){
         
         inputChange();
         agreeAll();
-
 
         // script
     });
