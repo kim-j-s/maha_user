@@ -43,6 +43,9 @@ $transition : opacity 0.3s, visibility 0.3s;
     display: flex;
     &.column {
         flex-direction: column;
+        .topCont {
+            margin-bottom: 20px;
+        }
     }
     .sb {
         justify-content: space-between;
@@ -55,7 +58,22 @@ $transition : opacity 0.3s, visibility 0.3s;
 
 .bottomContent {
     margin-top: auto;
-    padding: 0 0 30px 0;
+    /* padding: 0 0 30px 0; */
+}
+
+.bc-cont {
+    position: relative;
+    top: 30px;
+    overflow: hidden;
+}
+.bc {
+    font-size: 0;
+    background: #f3f4f7;
+    > a {
+        display: inline-block;
+        width: 50%;
+        height: 100px;
+    }
 }
 
 .hTitle {
@@ -104,8 +122,11 @@ $transition : opacity 0.3s, visibility 0.3s;
 
     .container {
         flex-grow: 1;
-        padding: 35px 22px 0 22px;
+        padding: 35px 0 30px 0;
         overflow: auto;
+        .inCont {
+            padding: 0 22px;
+        }
     }
 }
 
