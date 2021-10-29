@@ -31,6 +31,33 @@ $transition : opacity 0.3s, visibility 0.3s;
     font-weight: 700 !important;
 }
 
+.mtAuto {
+    margin-top: auto;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+    &.column {
+        flex-direction: column;
+    }
+    .sb {
+        justify-content: space-between;
+    }
+}
+
+.flexNone {
+    flex: none !important;
+}
+
+.bottomContent {
+    margin-top: auto;
+    padding: 0 0 30px 0;
+}
+
 .hTitle {
     font-weight: 700;
     &.ty1 {
@@ -48,18 +75,132 @@ $transition : opacity 0.3s, visibility 0.3s;
     &.ty4 {
         font-size: 16px;
         line-height: 24px;
+        + .txt02 {
+            margin-top: 17px;
+        }
     }
 }
 
 .txt01 {
     font-size: 14px;
     color: $color05;
-    line-height: 20px;
+    line-height: 21px;
+}
+
+.txt02 {
+    font-size: 16px;
+    color: $color05;
+    line-height: 24px;
 }
 
 .color02 {
     color: $color02 !important;
 }
 
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+        flex-grow: 1;
+        padding: 35px 22px 0 22px;
+        overflow: auto;
+    }
+}
+
+.userWrap {
+    flex: none;
+    position: relative;
+    padding: 36px 30px 30px 30px;
+    background: #0000ff;
+    .side {
+        position: absolute;
+        bottom: -30px;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        &.left {
+            left: 0;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background: transparent;
+                border-radius: 50%;
+                -webkit-box-shadow: 0px 0px 0px 10000px #0000ff;
+                        box-shadow: 0px 0px 0px 10000px #0000ff;
+            }
+            
+        }
+        &.right {
+            right: 0;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60px;
+                height: 60px;
+                background: transparent;
+                border-radius: 50%;
+                -webkit-box-shadow: 0px 0px 0px 10000px #0000ff;
+                        box-shadow: 0px 0px 0px 10000px #0000ff;
+            }
+        }
+
+    }
+}
+
+.userWrapInfo {
+    position: relative;
+    padding-right: 50px;
+    .alarm {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 39px;
+        background: url(../images/common/ico_bell.png) no-repeat;
+        overflow: hidden;
+        text-indent: -999px;
+    }
+}
+
+.profile {
+    font-size: 0;
+    .thumb {
+        display: inline-block;
+        vertical-align: top;
+        width: 75px;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .desc {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 75px);
+        padding-top: 11px;
+        padding-left: 20px;
+        .name {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+            color: #fff;
+        }
+        .detail {
+            font-size: 16px;
+            line-height: 28px;
+            color: #f3f4f7;
+        }
+    }
+}
 
 /* // common */
