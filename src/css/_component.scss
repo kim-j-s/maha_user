@@ -527,6 +527,13 @@
         &.error:focus {
             border-bottom: 2px solid $color02;
         }
+        &.cert {
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 30px;
+            text-indent: 30px;
+        }
     }
     + .txt01 {
         padding: 8px 0 0 8px;
@@ -549,6 +556,27 @@
 
 .link {
     display: inline-block;
+    line-height: 24px;
+    color: $color07;
+    &:after {
+        content: '';
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-left: 6px;
+        border-top: 1px solid #141a44;
+        border-right: 1px solid #141a44;
+        transform: rotate(45deg);
+    }
+    &.etc01 {
+        padding-left: 25px;
+        background: url(../images/common/ico_link01.png) no-repeat left center / 18px auto;
+    }
+    + .agrWrap {
+        margin-top: 20px;
+    }
 }
 
 /* // component */

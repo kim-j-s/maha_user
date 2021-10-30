@@ -1,4 +1,44 @@
 /* common */
+.color01 {
+  color: #0000ff !important;
+}
+
+.color02 {
+  color: #fe3b1f !important;
+}
+
+.color03 {
+  color: #ededef !important;
+}
+
+.color04 {
+  color: #d0d1da !important;
+}
+
+.color05 {
+  color: #898da4 !important;
+}
+
+.color06 {
+  color: #b7bac8 !important;
+}
+
+.color07 {
+  color: #141a44 !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mt40 {
+  margin-top: 40px !important;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
 .medium {
   font-weight: 500 !important;
 }
@@ -46,12 +86,44 @@
 
 .bottomContent {
   margin-top: auto;
-  padding-top: 20px;
+  padding-top: 30px;
+}
+
+.bottomContent .inCont + .footCont {
+  margin-top: 30px;
+}
+
+.bottomContent .txtBox + .btn {
+  margin-top: 30px;
+}
+
+.helpCont {
+  text-align: right;
+}
+
+.helpCont > a {
+  display: inline-block;
+  width: 120px;
+  padding: 4px 5px;
+  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(208, 209, 218, 0.5);
+}
+
+.helpCont > a > .text {
+  display: block;
+  padding-left: 50px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.helpCont > a.channelTalk > .text {
+  background: url(../images/common/ico_channeltalk.png) no-repeat left center/40px auto;
 }
 
 .footCont {
   position: relative;
-  top: 30px;
   overflow: hidden;
 }
 
@@ -82,18 +154,29 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  color: #d0d1da;
 }
 
 .footCont .inner > a.r3 > .text {
-  color: #0000ff;
   padding-left: 35px;
   background: url(../images/common/ico_r3.png) no-repeat left center;
 }
 
 .footCont .inner > a.analysis > .text {
-  color: #d0d1da;
   padding-left: 30px;
   background: url(../images/common/ico_analysis.png) no-repeat left center;
+}
+
+.footCont .inner > a.on > .text {
+  color: #0000ff;
+}
+
+.footCont .inner > a.on.r3 > .text {
+  background: url(../images/common/ico_r3_on.png) no-repeat left center;
+}
+
+.footCont .inner > a.on.analysis > .text {
+  background: url(../images/common/ico_analysis_on.png) no-repeat left center;
 }
 
 .hTitle {
@@ -141,6 +224,19 @@
   line-height: 24px;
 }
 
+.txtTel {
+  padding-left: 30px;
+  line-height: 24px;
+  background: url(../images/common/ico_tel.png) no-repeat left center/22px auto;
+}
+
+.txtTel a {
+  display: inline-block;
+  margin-left: 3px;
+  color: #141a44;
+  text-decoration: underline;
+}
+
 .color02 {
   color: #fe3b1f !important;
 }
@@ -169,6 +265,61 @@
 
 .wrap .container .inCont {
   padding: 0 22px;
+}
+
+.fullPopup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fullPopup--title {
+  padding-right: 40px;
+}
+
+.fullPopup .closeBtn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+}
+
+.fullPopup .closeBtn > span {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.fullPopup .closeBtn > span::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 22px;
+  border-bottom: 3px solid #141a44;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.fullPopup .closeBtn > span::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: -2px;
+  width: 22px;
+  border-bottom: 3px solid #141a44;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.fullPopup.wrap .container {
+  padding-top: 25px;
 }
 
 .userWrap {
@@ -861,6 +1012,14 @@
   border-bottom: 2px solid #fe3b1f;
 }
 
+.inputWrap > .inp.cert {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 30px;
+  text-indent: 30px;
+}
+
 .inputWrap + .txt01 {
   padding: 8px 0 0 8px;
 }
@@ -883,6 +1042,32 @@
 
 .link {
   display: inline-block;
+  line-height: 24px;
+  color: #141a44;
+}
+
+.link:after {
+  content: '';
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-top: 1px solid #141a44;
+  border-right: 1px solid #141a44;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.link.etc01 {
+  padding-left: 25px;
+  background: url(../images/common/ico_link01.png) no-repeat left center/18px auto;
+}
+
+.link + .agrWrap {
+  margin-top: 20px;
 }
 
 /* // component */
@@ -905,7 +1090,11 @@
 }
 
 .list01 > li + li {
-  margin-top: 5px;
+  margin-top: 1px;
+}
+
+* + .list01 {
+  margin-top: 10px;
 }
 
 .list02 > li {
@@ -1072,6 +1261,7 @@
 
 .cardEle {
   position: relative;
+  margin-top: 20px;
   padding: 20px 10px 25px 10px;
   border-radius: 15px;
   border: 1px solid #ededef;
@@ -1082,11 +1272,25 @@
   border-bottom: 1px solid #ededef;
 }
 
+.cardEle__top .brandLogo {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.cardEle__top .name {
+  font-weight: 700;
+  line-height: 24px;
+}
+
 .cardEle__cont {
   padding: 15px 10px 0 10px;
 }
 
 .cardEle__cont .btnArea {
+  margin-top: 13px;
+}
+
+.cardEle__cont .dList.full + .btnArea {
   margin-top: 25px;
 }
 
@@ -1190,3 +1394,25 @@
 }
 
 /* // element */
+/* content */
+.inviteCode {
+  margin-top: 35px;
+}
+
+.fullPopup--title + .inpWrap {
+  margin-top: 45px;
+}
+
+.fullPopup--title + .inpWrap.cert {
+  margin-top: 25px;
+}
+
+.inpWrap * + .inputWrap {
+  margin-top: 30px;
+}
+
+.inpWrap.cert .link {
+  margin-top: 24px;
+}
+
+/* // content */

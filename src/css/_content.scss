@@ -1,0 +1,25 @@
+
+/* content */
+.inviteCode {
+    margin-top: 35px;
+}
+
+.inpWrap {
+    .fullPopup--title + & {
+        margin-top: 45px;
+        &.cert {
+            margin-top: 25px;
+        }
+    }
+    & * + .inputWrap {
+        margin-top: 30px;
+    }
+    &.cert {
+        .link {
+            margin-top: 24px;
+        }
+    }
+}
+
+
+/* // content */

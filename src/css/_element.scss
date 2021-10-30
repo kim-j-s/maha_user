@@ -1,5 +1,6 @@
 /* element */
 .list01 {
+    
     > li {
         position: relative;
         padding-left: 13px;
@@ -16,8 +17,11 @@
 
         }
         + li {
-            margin-top: 5px;
+            margin-top: 1px;
         }
+    }
+    * + & {
+        margin-top: 10px;
     }
 }
 
@@ -151,17 +155,31 @@
 
 .cardEle {
     position: relative;
+    margin-top: 20px;
     padding: 20px 10px 25px 10px;
     border-radius: 15px;
     border: 1px solid $color03;
     &__top {
         padding: 0 10px 10px 10px;
         border-bottom: 1px solid $color03;
+        .brandLogo {
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .name {
+            font-weight: 700;
+            line-height: 24px;
+        }
     }
     &__cont {
         padding: 15px 10px 0 10px;
         .btnArea {
-            margin-top: 25px;
+            margin-top: 13px;
+        }
+        .dList.full {
+            + .btnArea {
+                margin-top: 25px;
+            }
         }
     }
 }

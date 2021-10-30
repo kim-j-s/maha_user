@@ -36,7 +36,6 @@
             $(this).on('click', function(){
                 var lng = $(this).closest('.agrList').find('input').not('.exception').length;
                 var checkedLng = $(this).closest('.agrList').find('input:checkbox:checked').not('.exception').length;
-                console.log(lng, checkedLng);
                 if (lng === checkedLng) {
                     $(this).closest('.agrWrap').find('.chkAll').prop('checked',true);
                 } else {

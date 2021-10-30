@@ -24,6 +24,38 @@ $transition : opacity 0.3s, visibility 0.3s;
 }
 
 /* common */
+.color01 {
+    color: #0000ff !important;
+}
+.color02 {
+    color: #fe3b1f !important;
+}
+.color03 {
+    color: #ededef !important;
+}
+.color04 {
+    color: #d0d1da !important;
+}
+.color05 {
+    color: #898da4 !important;
+}
+.color06 {
+    color: #b7bac8 !important;
+}
+.color07 {
+    color: #141a44 !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+.mt40 {
+    margin-top: 40px !important;
+}
+.pb0 {
+    padding-bottom: 0 !important;
+}
+
 .medium {
     font-weight: 500 !important;
 }
@@ -55,12 +87,40 @@ $transition : opacity 0.3s, visibility 0.3s;
 
 .bottomContent {
     margin-top: auto;
-    padding-top: 20px;
+    padding-top: 30px;
+    .inCont + .footCont {
+        margin-top: 30px;
+    }
+    .txtBox + .btn {
+        margin-top: 30px;
+    }
+}
+
+.helpCont {
+    text-align: right;
+    > a {
+        display: inline-block;
+        width: 120px;
+        padding: 4px 5px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(208, 209, 218, 0.5);
+        > .text {
+            display: block;
+            padding-left: 50px;
+            line-height: 40px;
+            text-align: left;
+        }
+        &.channelTalk {
+            > .text {
+                background: url(../images/common/ico_channeltalk.png) no-repeat left center / 40px auto;
+            }
+        }
+    }
 }
 
 .footCont {
     position: relative;
-    top: 30px;
     overflow: hidden;
     .inner {
         display: flex;
@@ -75,25 +135,38 @@ $transition : opacity 0.3s, visibility 0.3s;
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 24px;
+                color: $color04;
             }
             &.r3 {
                 > .text {
-                    color: $color01;
                     padding-left: 35px;
                     background: url(../images/common/ico_r3.png) no-repeat left center;
                 }
             }
             &.analysis {
                 > .text {
-                    color: $color04;
                     padding-left: 30px;
                     background: url(../images/common/ico_analysis.png) no-repeat left center;
+                }
+            }
+            &.on {
+                > .text {
+                    color: $color01;
+                }
+                &.r3 {
+                    > .text {
+                        background: url(../images/common/ico_r3_on.png) no-repeat left center;
+                    }
+                }
+                &.analysis {
+                    > .text {
+                        background: url(../images/common/ico_analysis_on.png) no-repeat left center;
+                    }
                 }
             }
         }
     }
 }
-
 
 .hTitle {
     font-weight: 700;
@@ -133,6 +206,17 @@ $transition : opacity 0.3s, visibility 0.3s;
     color: $color05;
     line-height: 24px;
 }
+.txtTel {
+    padding-left: 30px;
+    line-height: 24px;
+    background: url(../images/common/ico_tel.png) no-repeat left center / 22px auto;
+    a {
+        display: inline-block;
+        margin-left: 3px;
+        color: $color07;
+        text-decoration: underline;
+    }
+}
 
 .color02 {
     color: $color02 !important;
@@ -149,6 +233,52 @@ $transition : opacity 0.3s, visibility 0.3s;
         overflow: auto;
         .inCont {
             padding: 0 22px;
+        }
+    }
+}
+.fullPopup {    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    &--title {
+        padding-right: 40px;
+    }
+    .closeBtn {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        > span {
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 25px;
+            text-indent: -999px;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 5px;
+                width: 22px;
+                border-bottom: 3px solid $color07;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 8px;
+                right: -2px;
+                width: 22px;
+                border-bottom: 3px solid $color07;
+                transform: rotate(135deg);
+            }
+        }
+    }
+    &.wrap {
+        .container {
+            padding-top: 25px;
         }
     }
 }

@@ -1,0 +1,58 @@
+@@include('head.html')
+<body>
+
+<div class="wrap">
+    @@include('user.html')
+
+    <div class="container flex column fullHeight sb pb0">
+        <div class="flexNone inCont">
+            <div class="tabWrap">
+                <a href="#" class="on point"><span class="text">청구</span></a>
+                <a href="#"><span class="text">실비청구 현황</span></a>
+            </div>
+            <h4 class="hTitle ty5">
+                실손보험이 없습니다<br>
+                실손보험을 추천해 드릴게요
+            </h4>
+            <div class="cardEle">
+                <div class="cardEle__top">
+                    <img src="../images/logos/logo_kb.png" alt="KB 손해보험" style="width: 144px;" class="brandLogo">
+                    <p class="name">KB튼튼환장 건강보험</p>
+                </div>
+                <div class="cardEle__cont">
+                    <ul class="dList">
+                        <li class="top">
+                            <strong class="tit bold color05">월 보험료</strong>
+                            <div class="cont bold color05">11,900원</div>
+                        </li>
+                    </ul>
+                    <div class="btnArea">
+                        <button type="button" class="btn ty3" disabled><span class="text">자세히 보기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardEle">
+                <div class="cardEle__top">
+                    <img src="../images/logos/logo_kb.png" alt="KB 손해보험" style="width: 144px;" class="brandLogo">
+                    <p class="name">KB튼튼환장 건강보험</p>
+                </div>
+                <div class="cardEle__cont">
+                    <ul class="dList">
+                        <li class="top">
+                            <strong class="tit bold color05">월 보험료</strong>
+                            <div class="cont bold color05">11,900원</div>
+                        </li>
+                    </ul>
+                    <div class="btnArea">
+                        <button type="button" class="btn ty3" disabled><span class="text">자세히 보기</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomContent">
+            @@include('foot.html')
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -2,360 +2,298 @@
 <html lang="ko">
 
 <head>
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-	<title>공통 템플릿</title>
-	<link href="../css/reset.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>공통 템플릿</title>
+    <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/common.css" rel="stylesheet" />
 
     <link href="guide.css" rel="stylesheet" />
 
-	<script src="../js/jquery.min.js"></script>    
+    <script src="../js/jquery.min.js"></script>
 
-	<script>
-		(function($){
-			$(function(){
-				let gBox = `<div class="guideBox">
+    <script>
+        (function($) {
+            $(function() {
+                let gBox = `<div class="guideBox">
 					<pre class="brush: html;">
 					</pre>
 				</div>
 				`;
 
-				const $guideElement = $('.guideElement');
-				$guideElement.each(function(){
-					$(this).after(gBox);
-					const $element = $(this).html();
-					$(this).next().children('pre').html($element);
-				});
+                const $guideElement = $('.guideElement');
+                $guideElement.each(function() {
+                    $(this).after(gBox);
+                    const $element = $(this).html();
+                    $(this).next().children('pre').html($element);
+                });
 
-			});
-		})(jQuery);
-	</script>	
+            });
+        })(jQuery);
+    </script>
 
-	<script type="text/javascript" src="code/scripts/shCore.js"></script>
-	<script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
-	<script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
-	<script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
-	<script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
-	<script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
 
-	<link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
-	<link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
-	<script type="text/javascript">
-		SyntaxHighlighter.all();
-	</script>
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 
-	<!-- 구현 페이지 js -->
-	
-	<script type="text/javascript" src="../js/common.js"></script>
-	<!-- 구현 페이지 js -->
+    <!-- 구현 페이지 js -->
+
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!-- 구현 페이지 js -->
 
 </head>
+
 <body>
     <div class="maping">
-		<a href="template.html">Component</a>
-		<a href="template_element.html">Element</a>
-	</div>
-	<h1 class="guideTitleh1">Component</h1>
+        <a href="template.html">Component</a>
+        <a href="template_element.html">Element</a>
+    </div>
+    <h1 class="guideTitleh1">Component</h1>
 
-	<h2 class="guideTitleh2">Font - 24px 기준</h2>
-	<div class="guideElement" style="font-size: 24px;">
-		<p>IBM Plex Sans KR</p>
-		<p class="medium">IBM Plex Sans KR Medium</p>
-		<p class="bold">IBM Plex Sans KR Bold</p>
-	</div>
+    <h2 class="guideTitleh2">Font - 24px 기준</h2>
+    <div class="guideElement" style="font-size: 24px;">
+        <p>IBM Plex Sans KR</p>
+        <p class="medium">IBM Plex Sans KR Medium</p>
+        <p class="bold">IBM Plex Sans KR Bold</p>
+    </div>
 
-	<h2 class="guideTitleh2">Title</h2>
-	<div class="guideElement">
-		<h2 class="hTitle ty1">타이틀 - Font-size: 35px / Line-height: 45px</h2>
-		<h3 class="hTitle ty2">타이틀 - Font-size: 24px / Line-height: 30px</h3>
-		<h3 class="hTitle ty3">타이틀 - Font-size: 20px / Line-height: 30px</h3>
-		<h4 class="hTitle ty4">타이틀 - Font-size: 18px / Line-height: 30px</h4>
-		<h4 class="hTitle ty5">타이틀 - Font-size: 16px / Line-height: 24px</h4>
-	</div>
+    <h2 class="guideTitleh2">Title</h2>
+    <div class="guideElement">
+        <h2 class="hTitle ty1">타이틀 - Font-size: 35px / Line-height: 45px</h2>
+        <h3 class="hTitle ty2">타이틀 - Font-size: 24px / Line-height: 30px</h3>
+        <h3 class="hTitle ty3">타이틀 - Font-size: 20px / Line-height: 30px</h3>
+        <h4 class="hTitle ty4">타이틀 - Font-size: 18px / Line-height: 30px</h4>
+        <h4 class="hTitle ty5">타이틀 - Font-size: 16px / Line-height: 24px</h4>
+    </div>
 
-	<h2 class="guideTitleh2">Text</h2>
-	<div class="guideElement">
-		<p class="txt01">문구 - Font-size: 14px / Line-height: 21px</p>
-		<p class="txt02">문구 - Font-size: 16px / Line-height: 24px</p>
-	</div>
+    <h2 class="guideTitleh2">Text</h2>
+    <div class="guideElement">
+        <p class="txt01">문구 - Font-size: 14px / Line-height: 21px</p>
+        <p class="txt02">문구 - Font-size: 16px / Line-height: 24px</p>
+        <div class="txtTel">DB손해보험 콜센터 <a href="tel:02-321-2322">02 321 2322</a></div>
+    </div>
 
-	<h2 class="guideTitleh2">Color</h2>
-	<div class="guideElement">
-		<p style="color: #0000ff;">$color01 : #0000ff</p>
-		<p style="color: #fe3b1f;">$color02 : #fe3b1f</p>
-		<p style="color: #ededef;">$color03 : #ededef</p>
-		<p style="color: #d0d1da;">$color04 : #d0d1da</p>
-		<p style="color: #898da4;">$color05 : #898da4</p>
-	</div>
+    <h2 class="guideTitleh2">Color</h2>
+    <div class="guideElement">
+        <p style="color: #0000ff;">$color01 : #0000ff</p>
+        <p style="color: #fe3b1f;">$color02 : #fe3b1f</p>
+        <p style="color: #ededef;">$color03 : #ededef</p>
+        <p style="color: #d0d1da;">$color04 : #d0d1da</p>
+        <p style="color: #898da4;">$color05 : #898da4</p>
+    </div>
 
-	<h2 class="guideTitleh2">Input</h2>
-	<div class="guideElement">
-		<div class="inputWrap">
-			<input type="text" name="" id="" class="inp" placeholder="직접입력">
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Input</h2>
+    <div class="guideElement">
+        <div class="inputWrap">
+            <input type="text" name="" id="" class="inp" placeholder="직접입력">
+        </div>
+    </div>
 
-	<div class="guideElement">
-		<div class="inputWrap">
-			<label for="id01" class="label">이름</label>
-			<input type="text" name="" id="id01" class="inp" value="이승현">
-		</div>
-		<p class="txt01">업무용, 혹은 타인 명의의 핸드폰번호로 진행 불가</p>
-	</div>
+    <div class="guideElement">
+        <div class="inputWrap">
+            <label for="id01" class="label">이름</label>
+            <input type="text" name="" id="id01" class="inp" value="이승현">
+        </div>
+        <p class="txt01">업무용, 혹은 타인 명의의 핸드폰번호로 진행 불가</p>
+    </div>
 
-	<div class="guideElement">
-		<div class="inputWrap">
-			<label for="id02" class="label">이름</label>
-			<input type="text" name="" id="id02" class="inp error" placeholder="특수문자 입력">
-		</div>
-		<p class="txt01 color02">업무용, 혹은 타인 명의의 핸드폰번호로 진행 불가</p>
-	</div>
-	
-	<h2 class="guideTitleh2">Button</h2>
-	<div class="guideElement">
-		<button type="button" class="btn ty1"><span class="text">버튼 ty1</span></button>
-		<br>
-		<button type="button" class="btn ty1" disabled><span class="text">버튼 ty1 Disabled</span></button>
-		<br>
-		<button type="button" class="btn ty2"><span class="text">버튼 ty2</span></button>
-		<br>
-		<button type="button" class="btn ty3"><span class="text">버튼 ty3</span></button>
-		<br>
-		<button type="button" class="btn ty3" disabled><span class="text">버튼 ty3 Disabled</span></button>
-		<br>
-		<button type="button" class="btn ty4"><span class="text">버튼 ty4</span></button>
-		<br>
-		<button type="button" class="btn ty5"><span class="text">버튼 ty5</span></button>
-	</div>
+    <div class="guideElement">
+        <div class="inputWrap">
+            <label for="id02" class="label">이름</label>
+            <input type="text" name="" id="id02" class="inp error" placeholder="특수문자 입력">
+        </div>
+        <p class="txt01 color02">업무용, 혹은 타인 명의의 핸드폰번호로 진행 불가</p>
+    </div>
 
-	<h2 class="guideTitleh2">btnArea</h2>
-	<div class="guideElement">
-		<div class="btnArea">
-			<button type="button" class="btn ty2"><span class="text">재설계 요청</span></button>
-			<button type="button" class="btn ty1"><span class="text">가입하기</span></button>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Button</h2>
+    <div class="guideElement">
+        <button type="button" class="btn ty1"><span class="text">버튼 ty1</span></button>
+        <br>
+        <button type="button" class="btn ty1" disabled><span class="text">버튼 ty1 Disabled</span></button>
+        <br>
+        <button type="button" class="btn ty2"><span class="text">버튼 ty2</span></button>
+        <br>
+        <button type="button" class="btn ty3"><span class="text">버튼 ty3</span></button>
+        <br>
+        <button type="button" class="btn ty3" disabled><span class="text">버튼 ty3 Disabled</span></button>
+        <br>
+        <button type="button" class="btn ty4"><span class="text">버튼 ty4</span></button>
+        <br>
+        <button type="button" class="btn ty5"><span class="text">버튼 ty5</span></button>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox</h2>
-	<div class="guideElement">
-		<div class="chkbox">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">체크박스</span>
-			</label>
-		</div>
-		<div class="chkbox">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">체크박스</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">btnArea</h2>
+    <div class="guideElement">
+        <div class="btnArea">
+            <button type="button" class="btn ty2"><span class="text">재설계 요청</span></button>
+            <button type="button" class="btn ty1"><span class="text">가입하기</span></button>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox - etc01</h2>
-	<div class="guideElement">
-		<div class="chkbox etc01">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">체크박스</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox</h2>
+    <div class="guideElement">
+        <div class="chkbox">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">체크박스</span>
+            </label>
+        </div>
+        <div class="chkbox">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">체크박스</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Text Check</h2>
-	<div class="guideElement">
-		<div class="textChkbox">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">개인정보 이용 동의(필수)</span>
-			</label>
-			<a href="#" class="detail-link"><span class="text">자세히 보기</span></a>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox - etc01</h2>
+    <div class="guideElement">
+        <div class="chkbox etc01">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">체크박스</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox - Block</h2>
-	<div class="guideElement">
-		<div class="chkboxBlock">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">선택</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Text Check</h2>
+    <div class="guideElement">
+        <div class="textChkbox">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">개인정보 이용 동의(필수)</span>
+            </label>
+            <a href="#" class="detail-link"><span class="text">자세히 보기</span></a>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox - Block</h2>
-	<div class="guideElement">
-		<div class="chkboxBlock">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">보험사에서 병명이 기재된 서류를 요구할 수 있다는 사실을 확인하였습니다</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox - Block</h2>
+    <div class="guideElement">
+        <div class="chkboxBlock">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">선택</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox - Block - etc01</h2>
-	<div class="guideElement">
-		<div class="chkboxBlock etc01">
-			<label>
-				<input type="checkbox" name="" id="">
-				<span class="text">모두 동의하기</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox - Block</h2>
+    <div class="guideElement">
+        <div class="chkboxBlock">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">보험사에서 병명이 기재된 서류를 요구할 수 있다는 사실을 확인하였습니다</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Checkbox - Block - etc02</h2>
-	<div class="guideElement">
-		<div class="chkboxBlockGroup">
-			<div class="chkboxBlock etc02">
-				<label>
-					<input type="checkbox" name="" id="">
-					<span class="text">염좌</span>
-				</label>
-			</div>
-			<div class="chkboxBlock etc02">
-				<label>
-					<input type="checkbox" name="" id="">
-					<span class="text">관절통</span>
-				</label>
-			</div>
-			<div class="chkboxBlock etc02">
-				<label>
-					<input type="checkbox" name="" id="">
-					<span class="text">기관지염</span>
-				</label>
-			</div>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox - Block - etc01</h2>
+    <div class="guideElement">
+        <div class="chkboxBlock etc01">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span class="text">모두 동의하기</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Radio</h2>
-	<div class="guideElement">
-		<div class="chkbox">
-			<label>
-				<input type="radio" name="radio" id="">
-				<span class="text">라디오 박스</span>
-			</label>
-		</div>
-		<div class="chkbox">
-			<label>
-				<input type="radio" name="radio" id="">
-				<span class="text">라디오 박스</span>
-			</label>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Checkbox - Block - etc02</h2>
+    <div class="guideElement">
+        <div class="chkboxBlockGroup">
+            <div class="chkboxBlock etc02">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <span class="text">염좌</span>
+                </label>
+            </div>
+            <div class="chkboxBlock etc02">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <span class="text">관절통</span>
+                </label>
+            </div>
+            <div class="chkboxBlock etc02">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <span class="text">기관지염</span>
+                </label>
+            </div>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Tab</h2>
-	<div class="guideElement">
-		<div class="tabWrap">
-			<a href="#" class="on"><span class="text">청구</span></a>
-			<a href="#"><span class="text">실비청구 현황</span></a>
-		</div>		
-	</div>
+    <h2 class="guideTitleh2">Radio</h2>
+    <div class="guideElement">
+        <div class="chkbox">
+            <label>
+                <input type="radio" name="radio" id="">
+                <span class="text">라디오 박스</span>
+            </label>
+        </div>
+        <div class="chkbox">
+            <label>
+                <input type="radio" name="radio" id="">
+                <span class="text">라디오 박스</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Tab - point</h2>
-	<div class="guideElement">
-		<div class="tabWrap">
-			<a href="#" class="on point"><span class="text">청구</span></a>
-			<a href="#"><span class="text">실비청구 현황</span></a>
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Tab</h2>
+    <div class="guideElement">
+        <div class="tabWrap">
+            <a href="#" class="on"><span class="text">청구</span></a>
+            <a href="#"><span class="text">실비청구 현황</span></a>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Radio Tab</h2>
-	<div class="guideElement">
-		<div class="radioTab">
-			<label>
-				<input type="radio" name="radio01" id="">
-				<span class="text">청구</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio01" id="">
-				<span class="text">분석</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio01" id="">
-				<span class="text">계약</span>
-			</label>			
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Tab - point</h2>
+    <div class="guideElement">
+        <div class="tabWrap">
+            <a href="#" class="on point"><span class="text">청구</span></a>
+            <a href="#"><span class="text">실비청구 현황</span></a>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Radio Tab - point</h2>
-	<div class="guideElement">
-		<div class="radioTab point">
-			<label>
-				<input type="radio" name="radio02" id="">
-				<span class="text">청구</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio02" id="">
-				<span class="text">분석</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio02" id="">
-				<span class="text">계약</span>
-			</label>			
-		</div>
-	</div>
+    <h2 class="guideTitleh2">Radio Tab</h2>
+    <div class="guideElement">
+        <div class="radioTab">
+            <label>
+                <input type="radio" name="radio01" id="">
+                <span class="text">청구</span>
+            </label>
+            <label>
+                <input type="radio" name="radio01" id="">
+                <span class="text">분석</span>
+            </label>
+            <label>
+                <input type="radio" name="radio01" id="">
+                <span class="text">계약</span>
+            </label>
+        </div>
+    </div>
 
-	<h2 class="guideTitleh2">Radio Tab - mini</h2>
-	<div class="guideElement">
-		<div class="radioTab mini point">
-			<label>
-				<input type="radio" name="radio03" id="">
-				<span class="text">청구</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio03" id="">
-				<span class="text">분석</span>
-			</label>			
-			<label>
-				<input type="radio" name="radio03" id="">
-				<span class="text">계약</span>
-			</label>			
-		</div>
-	</div>	
-
-	<h2 class="guideTitleh2">Radio - Block</h2>
-	<div class="guideElement">
-		<div class="chkboxBlock">
-			<label>
-				<input type="radio" name="ex01" id="">
-				<span class="text">동의합니다.</span>
-			</label>
-		</div>
-		<div class="chkboxBlock">
-			<label>
-				<input type="radio" name="ex01" id="">
-				<span class="text">동의하지 않습니다.</span>
-			</label>
-		</div>
-	</div>
-
-	<h2 class="guideTitleh2">Link</h2>
-	<div class="guideElement">
-		<a href="" class="link">계정정보 다시 입력하기</a> <br>
-		<a href="" class="link etc01">정확한 청구를 위해 꼭 확인해 주세요</a> <br>
-		<a href="" class="link etc02">보험금 청구는 어떻게 진행되나요?</a>
-	</div>
-	
-	<h2 class="guideTitleh2">Selectbox</h2>
-	<div class="guideElement">
-
-	</div>
-
-	<h2 class="guideTitleh2">Badge</h2>
-	<div class="guideElement">
-		<span class="badge ty1">신청 접수</span>
-		<br><br>
-		<span class="badge ty2">서류 발급 실패</span>
-	</div>
-	
-	<h2 class="guideTitleh2"></h2>
-	<div class="guideElement">
-
-	</div>
-</body>
-</html> <input type="radio" name="radio02" id="">
+    <h2 class="guideTitleh2">Radio Tab - point</h2>
+    <div class="guideElement">
+        <div class="radioTab point">
+            <label>
+                <input type="radio" name="radio02" id="">
+                <span class="text">청구</span>
+            </label>
+            <label>
+                <input type="radio" name="radio02" id="">
+                <span class="text">분석</span>
+            </label>
+            <label>
+                <input type="radio" name="radio02" id="">
                 <span class="text">계약</span>
             </label>
         </div>
